@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEATHER & CO — Premium Indonesian Leather Craftsmanship</title>
+  <meta name="description" content="LEATHER & CO — Tas kulit premium handmade Indonesia. Full-grain leather, dikerjakan artisan Bandung. Gratis ongkir di atas Rp 1.500.000. Pembayaran Midtrans & COD.">
+  <meta property="og:title" content="LEATHER & CO — Modern Leather Craftsmanship">
+  <meta property="og:description" content="Handcrafted. Timeless. For You. Tas kulit premium artisan Indonesia.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "LEATHER & CO",
+    "description": "Premium Indonesian leather bags, handcrafted by artisans.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Bandung", "addressCountry": "ID" },
+    "priceRange": "Rp 1.400.000 – Rp 4.500.000"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ══════════ ANNOUNCEMENT MARQUEE ══════════ -->
+  <div class="announce" aria-label="Pengumuman">
+    <div class="marquee">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+  </div>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <header id="header">
+    <button class="icon-btn hamburger" id="hamburgerBtn" aria-label="Buka menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#collections">Collections</a>
+      <a href="#about">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#home" class="logo">LEATHER <em>&amp;</em> CO</a>
+
+    <div class="header-icons">
+      <button class="icon-btn" id="searchBtn" aria-label="Cari produk">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <button class="icon-btn" id="accountBtn" aria-label="Akun">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>
+        <span class="account-initial" id="accountInitial" hidden></span>
+      </button>
+      <button class="icon-btn cart-btn" id="cartBtn" aria-label="Tas belanja">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 8h12l1.2 12.2a1 1 0 0 1-1 1.1H5.8a1 1 0 0 1-1-1.1L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="badge" id="cartBadge" hidden>0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MOBILE NAV ══════════ -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Menu mobile">
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#collections">Collections</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <!-- ══════════ HERO ══════════ -->
+    <section class="hero" id="home">
+      <img class="hero-img" src="https://picsum.photos/seed/leathercraft-hero/1920/1080.jpg" alt="Model membawa tas kulit premium LEATHER & CO" fetchpriority="high">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-kicker">Est. 1998 — Bandung, Indonesia</p>
+        <h1 class="hero-title">
+          <span class="line"><span>Discover the next chapter</span></span>
+          <span class="line"><span>of modern <em>leather</em></span></span>
+          <span class="line"><span>craftsmanship.</span></span>
+        </h1>
+        <p class="hero-sub">Handcrafted. Timeless. For You.</p>
+        <a href="#products" class="btn btn-light">Shop Now
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">Scroll<span></span></div>
+    </section>
+
+    <!-- ══════════ THE CROWD'S FAVORITE ══════════ -->
+    <section class="section" id="featured">
+      <div class="section-head reveal">
+        <div>
+          <p class="kicker">Most Wanted</p>
+          <h2 class="h2">The Crowd's Favorite</h2>
+        </div>
+        <a href="#products" class="text-link">Lihat Semua Koleksi
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="product-grid" id="featuredGrid"></div>
+    </section>
+
+    <!-- ══════════ SHOP BY CATEGORY ══════════ -->
+    <section class="section" id="collections">
+      <div class="section-head reveal">
+        <div>
+          <p class="kicker">Curated Silhouettes</p>
+          <h2 class="h2">Shop by Category</h2>
+        </div>
+      </div>
+      <div class="category-grid">
+        <a href="#products" class="category-card reveal" data-cat="tote">
+          <img src="https://picsum.photos/seed/tote-motion/800/1000.jpg" alt="Koleksi Tote Bags kulit" loading="lazy">
+          <span class="cat-index">01</span>
+          <span class="cat-name">Tote <em>Bags</em><small>Untuk hari yang panjang</small></span>
+        </a>
+        <a href="#products" class="category-card reveal" data-cat="crossbody">
+          <img src="https://picsum.photos/seed/crossbody-motion/800/1000.jpg" alt="Koleksi Crossbody Bags kulit" loading="lazy">
+          <span class="cat-index">02</span>
+          <span class="cat-name">Crossbody <em>Bags</em><small>Bebas bergerak, tetap rapi</small></span>
+        </a>
+        <a href="#products" class="category-card reveal" data-cat="backpack">
+          <img src="https://picsum.photos/seed/backpack-motion/800/1000.jpg" alt="Koleksi Backpacks kulit" loading="lazy">
+          <span class="cat-index">03</span>
+          <span class="cat-name">Backpacks<small>Struktur untuk kota</small></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ══════════ PRODUCT GRID + FILTER ══════════ -->
+    <section class="section" id="products">
+      <div class="section-head reveal">
+        <div>
+          <p class="kicker">The Full Collection</p>
+          <h2 class="h2">All Bags</h2>
+        </div>
+        <div class="filter-tabs" id="filterTabs" role="tablist" aria-label="Filter kategori">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="tote">Tote</button>
+          <button class="filter-btn" data-filter="crossbody">Crossbody</button>
+          <button class="filter-btn" data-filter="backpack">Backpack</button>
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-msg" id="emptyMsg" hidden>Tidak ada produk pada kategori ini.</p>
+    </section>
+
+    <!-- ══════════ ABOUT ══════════ -->
+    <section class="section about" id="about">
+      <div class="about-grid">
+        <figure class="about-img reveal">
+          <img src="https://picsum.photos/seed/artisan-workshop/900/1100.jpg" alt="Artisan mengerjakan tas kulit di workshop Bandung" loading="lazy">
+          <figcaption>Workshop kami — Bandung, Jawa Barat</figcaption>
+        </figure>
+        <div class="about-text reveal">
+          <p class="kicker">Our Craft</p>
+          <h2 class="h2">Dibuat oleh tangan,<br><em>bukan oleh mesin.</em></h2>
+          <p>Setiap tas LEATHER & CO lahir dari full-grain leather pilihan yang diseleksi satu per satu, lalu dikerjakan oleh 12 artisan senior kami dengan teknik saddle-stitch tradisional — jahitan tangan yang tidak bisa ditiru mesin.</p>
+          <p>Kami tidak mengejar musim. Kami mengejar usia: tas yang semakin dipakai, semakin cantik.</p>
+          <div class="about-stats">
+            <div><strong>27</strong><span>Tahun berkarya</span></div>
+            <div><strong>12</strong><span>Artisan senior</span></div>
+            <div><strong>100%</strong><span>Full-grain leather</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CONTACT ══════════ -->
+    <section class="section contact" id="contact">
+      <div class="contact-grid reveal">
+        <div>
+          <p class="kicker">Visit the Atelier</p>
+          <h2 class="h2">Contact</h2>
+        </div>
+        <div class="contact-info">
+          <p class="contact-label">Workshop &amp; Showroom</p>
+          <p>Jl. Riau No. 27, Bandung 40115, Indonesia</p>
+          <p class="contact-label">Jam Buka</p>
+          <p>Senin – Sabtu, 10.00 – 19.00 WIB</p>
+        </div>
+        <div class="contact-info">
+          <p class="contact-label">Email</p>
+          <p><a href="mailto:hello@leatherandco.id">hello@leatherandco.id</a></p>
+          <p class="contact-label">WhatsApp</p>
+          <p><a href="https://wa.me/6281234567890" target="_blank" rel="noopener">+62 812 3456 7890</a></p>
+          <a href="https://wa.me/6281234567890?text=Halo%20LEATHER%20%26%20CO,%20saya%20ingin%20bertanya" target="_blank" rel="noopener" class="btn btn-dark">Chat via WhatsApp
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="#products">Semua Tas</a>
+        <a href="#collections">Tote Bags</a>
+        <a href="#collections">Crossbody Bags</a>
+        <a href="#collections">Backpacks</a>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <a href="#contact">Cara Pemesanan</a>
+        <a href="#contact">Pengiriman &amp; Retur</a>
+        <a href="#contact">Perawatan Kulit</a>
+        <a href="#contact">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#about">Tentang Kami</a>
+        <a href="#about">Artisan Kami</a>
+        <a href="#contact">Karier</a>
+        <a href="#contact">Press</a>
+      </div>
+      <div class="footer-col footer-news">
+        <h4>Newsletter</h4>
+        <p>Cerita behind-the-stitch dan akses awal koleksi baru. Sekali sebulan, tanpa spam.</p>
+        <form id="newsletterForm" novalidate>
+          <input type="email" id="newsletterEmail" placeholder="Alamat email Anda" aria-label="Alamat email" required>
+          <button type="submit" aria-label="Berlangganan">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 LEATHER &amp; CO — Handcrafted in Indonesia</p>
+      <p class="pay-note">Pembayaran: <span>Midtrans</span> · <span>COD</span></p>
+    </div>
+  </footer>
+
+  <!-- ══════════ FLOATING BUTTONS ══════════ -->
+  <div class="floating-stack">
+    <a class="float-btn wa" href="https://wa.me/6281234567890?text=Halo%20LEATHER%20%26%20CO,%20saya%20ingin%20bertanya" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.5-.6c.1-.2.1-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-.7 2.1.1 3.5a11 11 0 0 0 4.5 4.1c1.7.8 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3Z"/></svg>
+    </a>
+    <button class="float-btn cart-float" id="cartFloat" aria-label="Buka tas belanja">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 8h12l1.2 12.2a1 1 0 0 1-1 1.1H5.8a1 1 0 0 1-1-1.1L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="badge" id="cartFloatBadge" hidden>0</span>
+    </button>
+  </div>
+
+  <!-- ══════════ BACKDROP ══════════ -->
+  <div class="backdrop" id="backdrop"></div>
+
+  <!-- ══════════ CART DRAWER ══════════ -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Tas belanja" aria-hidden="true">
+    <div class="drawer-head">
+      <h3>Your Bag <span id="drawerCount">(0)</span></h3>
+      <button class="icon-btn close-btn" data-close aria-label="Tutup">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="drawer-items" id="drawerItems"></div>
+    <div class="drawer-foot" id="drawerFoot">
+      <div class="drawer-total">
+        <span>Subtotal</span>
+        <strong id="cartTotal">Rp 0</strong>
+      </div>
+      <p class="drawer-note">Gratis ongkir untuk pesanan di atas Rp 1.500.000 · Pembayaran via <strong>Midtrans</strong> atau <strong>COD</strong>.</p>
+      <button class="btn btn-dark btn-block" id="checkoutBtn">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ══════════ SEARCH OVERLAY ══════════ -->
+  <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+    <button class="icon-btn close-btn search-close" data-close aria-label="Tutup pencarian">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="search-inner">
+      <input type="search" id="searchInput" placeholder="Cari tas… (mis. tote, crossbody)" aria-label="Cari produk" autocomplete="off">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <!-- ══════════ QUICK VIEW MODAL ══════════ -->
+  <div class="modal" id="quickView" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-card" id="quickViewCard"></div>
+  </div>
+
+  <!-- ══════════ ACCOUNT MODAL ══════════ -->
+  <div class="modal" id="accountModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-card account-card">
+      <button class="icon-btn close-btn" data-close aria-label="Tutup">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div id="accountBody"></div>
+    </div>
+  </div>
+
+  <!-- ══════════ TOASTS ══════════ -->
+  <div class="toast-wrap" id="toastWrap" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
